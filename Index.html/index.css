@@ -1,0 +1,227 @@
+/* General page styles */
+body {
+    color: rgb(0, 0, 0); /* Page text color */
+    background-color: rgb(255, 255, 255); /* Background color */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fixed font-family */
+    margin: 0;
+    background-image: url(/kuvat/IMG-20241007-WA0011.jpg);
+    background-position: 10% 50%;
+    background-size: cover; /* Background image */
+}
+
+/* Main content */
+main {
+    margin: 60px 16px; /* Adjust navbar height */
+    padding: 20px;
+}
+
+/* Paragraph styling */
+p {
+    margin: 5% 20% 15%;
+    color: black;
+    text-shadow: 0px 0px 0px rgb(235, 52, 52);
+    font-weight: 300;
+    font-size: 18px;
+    text-align: left; /* Fixed invalid value */
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+/* Navbar styles */
+.navBar {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Keeps it on top of other content */
+}
+
+.navBar ul {
+    list-style: none;
+    opacity: 0.8;
+    padding: 0;
+    margin: 24px;
+    overflow: hidden;
+}
+
+.navBar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-family: Lato;
+    text-align: center;
+    background-color: rgb(122, 122, 122);
+    border-radius: 75%;
+    margin: 5px;
+}
+
+.navBar a:hover {
+    background-color: hsl(0, 0%, 23%);
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.navBar li {
+    float: left;
+}
+
+/* Footer */
+footer {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    width: 100%; /* Ensure the footer takes the full width */
+    padding: 20px 0; /* Optional: add vertical padding */
+}
+
+/* Country Buttons */
+.countryButtons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 40px; /* Space between buttons */
+    margin-top: 10px; /* Add some space above the buttons */
+}
+
+.imageButton {
+    position: relative; /* Position relative to contain the hover text */
+    display: inline-block;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.imageButton img {
+    display: block; /* Remove bottom space */
+    width: 100%; /* Set button width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.buttonText {
+    position: absolute; /* Position text over the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px 30px; 
+    border-radius: 20px; /* Optional: rounded corners */
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.imageButton:hover .buttonText {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Social Icons */
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgb(1, 1, 1);
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    opacity: 0.9; 
+}
+
+.socialIcons a:hover { 
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s; 
+}
+
+.socialIcons a:hover i { 
+    color: rgb(1, 1, 1);
+    transition: 1.5s;
+}
+
+/* Footer Navigation */
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.footerNav ul li {
+    margin: 0 10px;
+}
+
+.footerNav ul li a {
+    color: rgb(1, 1, 1);
+    margin: 15px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+/* Footer Bottom */
+.footerBottom {
+    background-color: hsl(0, 0%, 80%);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.designer {
+    opacity: 0.6;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0px 5px;
+}
+
+/* Media Queries */
+@media (max-width: 710px) {
+    p {
+        font-size: 80%;
+    }
+    
+    h1 {
+        font-size: 18px; /* Added px unit */
+    }
+    
+    .footerNav ul {
+        flex-direction: column;
+    }
+    
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 470px) {
+    p {
+        margin: 1% 1% 10%;
+        font-size: 14px !important;
+    }
+    
+    main {
+        padding: 80px;
+        margin: 15% 0;  
+    }
+    
+    h1 {
+        font-size: 16px; /* Added px unit */
+    }
+}

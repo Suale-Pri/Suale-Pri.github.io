@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {color:rgb(0, 0, 0);  /*koko sivun tektin väri*/
+    background-color: #66FFFF   ; /* Light gray background */
+    color: #333; /* Dark text for good contrast */
+    font-family: Poppins, Arial, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;   
+    display: flex; 
+    flex-direction: column;
+    /* background-image:url(/kuvat/IMG-20241007-WA0011.jpg); */
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures the footer stays at the bottom */
+}
+main {
+    margin: 40px 16px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align text to the left */
+}
+
+p {
+    margin: 70px 20px;
+    color: black;
+    text-shadow: 0px 0px 0px rgb(235, 52, 52);
+    font-weight: 300 ;
+    font-size: 18px;
+}
+
+
+h1 {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    font-size: 1.8em;
+}
+.navBar ul{
+    position: sticky;
+    top: 0;
+    list-style: none;
+    background-color: hsl(0, 0%, 55%);
+    opacity: 0.8;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden; 
+}
+.navBar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navBar a:hover{
+    background-color: hsl(0, 0%, 4%);
+    opacity: 0.7;
+    transition: 0.4s;
+}
+.navBar li{ 
+    float: left;
+}
+
+
+ /* footer */
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+ }
+  /* .footer{
+    position:sticky;
+    bottom:0;
+    }  */
+footer{
+    background-color: rgb(255, 255, 255);
+ }
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+ }
+.socialIcons{
+    display: flex;
+    justify-content: center;
+ }
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color:rgb(1, 1, 1);
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    opacity: 0.9; 
+}
+.socialIcons a:hover{ 
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s; 
+
+}
+.socialIcons a:hover i{ 
+    color: rgb(1, 1, 1);
+    transition: 1.5s;
+}
+.footerNav ul{
+    display: flex ;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+.footerNav{
+    color: rgb(1, 1, 1);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.5em; 
+    opacity: 0.7;
+    transition: 0.5s;
+    }
+.footerNav ul li a{
+    color: rgb(1, 1, 1);
+    margin: 15px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li{
+    margin: 0 0px;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: hsl(0, 0%, 80%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.designer{
+    opacity: 0.6;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0px 5px;
+}
+
+/*kuva slideri */
+
+/* Dots Container */
+.dotsContainer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: transparent; /* Keeps the background under the dots neutral */
+}
+
+/* Individual dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171; /* Darker color for the active dot */
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%; /* Keeps aspect ratio */
+    display: flex;
+    
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+    
+}
+
+img.displaySlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+/* Navigation buttons */
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    padding: 50px 40px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.4s;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Fade animation */
+@keyframes fade {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* teksti ja kuva koodi (container) */
+.containerInformation {
+    flex: 1; /* Allows the container to grow and take up available space */
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+.containerItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.containerText {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.containerImage {
+    flex: 0 0 200px;
+    text-align: right;
+}
+
+.containerImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer koodi */ 
+
+.designer{
+    opacity: 0.6;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0px 5px;
+}
+@media (max-width: 768px){
+    .slider {
+        max-width: 50%; /* Narrower width on smaller screens */
+      }
+    .slider button {
+        padding: 15px;
+        height: 100%;
+        background-color: transparent;
+    }
+    .slider button:hover {
+        background-color: rgba(29, 29, 29, 0.7);
+        opacity: 0.5;
+        transition: 0.4s;
+    }
+    p {
+        font-size: 12px;
+    }
+    h1 { 
+        font-size: 20px;
+    }
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .containerInformation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerItem {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center;
+    }
+
+    .containerText {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .containerImage {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    }
+@media (max-width: 480px) {
+    .slider button {
+        padding: 30px;
+        height: 100%;
+        background-color: transparent;
+    }
+    .slider button:hover {
+        background-color: rgba(29, 29, 29, 0.7);
+        opacity: 0.5;
+        transition: 0.4s;
+    }
+    .slider-container {
+      max-width: 100%; /* Full width on mobile */
+    } 
+    p {
+        font-size: 12px !important;
+    }
+    h1 {
+        font-size: 16px;
+    }
+}
+  
